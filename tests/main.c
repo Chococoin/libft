@@ -22,6 +22,11 @@ int test_isalnum_digit();
 int test_isalnum_nonalnum();
 int test_isalnum_space();
 int test_isalnum_specialchar();
+int test_isascii_valid();
+int test_isascii_zero();
+int test_isascii_127();
+int test_isascii_negative();
+int test_isascii_above_127();
 
 int main()
 {
@@ -46,7 +51,12 @@ int main()
         { "ft_isalnum digit", test_isalnum_digit },
         { "ft_isalnum nonalnum", test_isalnum_nonalnum },
         { "ft_isalnum space", test_isalnum_space },
-        { "ft_isalnum specialchar", test_isalnum_specialchar }
+        { "ft_isalnum specialchar", test_isalnum_specialchar },
+        { "ft_isascii valid", test_isascii_valid },
+        { "ft_isascii zero", test_isascii_zero },
+        { "ft_isascii 127", test_isascii_127 },
+        { "ft_isascii negative", test_isascii_negative },
+        { "ft_isascii above 127", test_isascii_above_127 }
     };
 
     int test_count = sizeof(tests)/sizeof(t_test);
