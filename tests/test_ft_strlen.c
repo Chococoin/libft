@@ -18,5 +18,5 @@ int test_strlen_space()
 
 int test_strlen_long()
 {
-    return (ft_strlen("Hello, this is a long string") == 29);
+    return (ft_strlen("Hello, this is a long string") == 28);
 }
