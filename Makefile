@@ -10,8 +10,8 @@ TEST_DIR = tests
 # Source and objects
 SRCS = $(wildcard $(SRC_DIR)/*.c)
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(SRC_DIR)/%.o)
-#TEST_SRCS = $(wildcard $(TEST_DIR)/*.c)
-TEST_SRCS = $(TEST_DIR)/test_ft_strlen.c $(TEST_DIR)/main.c $(TEST_DIR)/test_runner.c
+TEST_SRCS = $(wildcard $(TEST_DIR)/*.c)
+#TEST_SRCS = $(TEST_DIR)/test_ft_strlen.c $(TEST_DIR)/main.c $(TEST_DIR)/test_runner.c
 TEST_NAME = test_suite
 NAME = libft.a
 

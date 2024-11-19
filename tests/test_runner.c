@@ -1,12 +1,6 @@
 #include "test_runner.h"
 #include <stdio.h>
 
-/* typedef struct s_test
-{
-    char *name;
-    int (*function)(void);
-} t_test;  */
-
 void run_tests (t_test tests[], int test_count)
 {
     int passed = 0;
