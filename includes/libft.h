@@ -4,5 +4,6 @@
 int ft_strlen(const char *s);
 int ft_isalpha(int c);
 int ft_isdigit(int c);
+int ft_isalnum(int c);
 
 #endif

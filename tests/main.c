@@ -16,6 +16,12 @@ int test_isdigit_space();
 int test_isdigit_specialchar();
 int test_isdigit_zero();
 int test_isdigit_nine();
+int test_isalnum_lowercase();
+int test_isalnum_uppercase();
+int test_isalnum_digit();
+int test_isalnum_nonalnum();
+int test_isalnum_space();
+int test_isalnum_specialchar();
 
 int main()
 {
@@ -34,7 +40,13 @@ int main()
         { "ft_isdigit space", test_isdigit_space },
         { "ft_isdigit specialchar", test_isdigit_specialchar },
         { "ft_isdigit zero", test_isdigit_zero },
-        { "ft_isdigit nine", test_isdigit_nine }
+        { "ft_isdigit nine", test_isdigit_nine },
+        { "ft_isalnum lowercase", test_isalnum_lowercase },
+        { "ft_isalnum uppercase", test_isalnum_uppercase },
+        { "ft_isalnum digit", test_isalnum_digit },
+        { "ft_isalnum nonalnum", test_isalnum_nonalnum },
+        { "ft_isalnum space", test_isalnum_space },
+        { "ft_isalnum specialchar", test_isalnum_specialchar }
     };
 
     int test_count = sizeof(tests)/sizeof(t_test);
