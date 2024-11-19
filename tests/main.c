@@ -10,6 +10,12 @@ int test_isalpha_uppercase();
 int test_isalpha_nonalpha();
 int test_isalpha_space();
 int test_isalpha_specialchar();
+int test_isdigit_digit();
+int test_isdigit_non_digit();
+int test_isdigit_space();
+int test_isdigit_specialchar();
+int test_isdigit_zero();
+int test_isdigit_nine();
 
 int main()
 {
@@ -22,7 +28,13 @@ int main()
         { "ft_isalpha uppercase", test_isalpha_uppercase },
         { "ft_isalpha nonalpha", test_isalpha_nonalpha },
         { "ft_isalpha space", test_isalpha_space },
-        { "ft_isalpha specialchar", test_isalpha_specialchar }
+        { "ft_isalpha specialchar", test_isalpha_specialchar },
+        { "ft_isdigit digit", test_isdigit_digit },
+        { "ft_isdigit non digit", test_isdigit_non_digit },
+        { "ft_isdigit space", test_isdigit_space },
+        { "ft_isdigit specialchar", test_isdigit_specialchar },
+        { "ft_isdigit zero", test_isdigit_zero },
+        { "ft_isdigit nine", test_isdigit_nine }
     };
 
     int test_count = sizeof(tests)/sizeof(t_test);
