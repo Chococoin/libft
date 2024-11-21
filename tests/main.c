@@ -34,16 +34,16 @@ int test_isprint_below_space();
 int test_isprint_127();
 int test_isprint_negative();
 int test_isprint_above_127();
-// int test_toupper_uppercase();
-// int test_toupper_lowercase();
-// int test_toupper_non_alpha();
-// int test_toupper_special_char();
-// int test_toupper_boundary();
-// int test_tolower_lowercase();
-// int test_tolower_uppercase();
-// int test_tolower_non_alpha();
-// int test_tolower_special_char();
-// int test_tolower_boundary();
+int test_toupper_uppercase();
+int test_toupper_lowercase();
+int test_toupper_non_alpha();
+int test_toupper_special_char();
+int test_toupper_boundary();
+int test_tolower_lowercase();
+int test_tolower_uppercase();
+int test_tolower_non_alpha();
+int test_tolower_special_char();
+int test_tolower_boundary();
 
 
 
@@ -83,16 +83,16 @@ int main()
 		{ "ft_isprint_127", test_isprint_127 },
 		{ "ft_isprint_negative", test_isprint_negative },
 		{ "ft_isprint_above_127", test_isprint_above_127 },
-		// { "ft_toupper_lowercase", test_toupper_lowercase },
-		// { "ft_toupper_uppercase", test_toupper_uppercase },
-		// { "ft_toupper_non_alpha", test_toupper_non_alpha },
-		// { "ft_toupper_special_char", test_toupper_special_char },
-		// { "ft_toupper_boundary", test_toupper_boundary },
-		// { "ft_tolower_lowercase", test_tolower_lowercase },
-		// { "ft_tolower_uppercase", test_tolower_uppercase },
-		// { "ft_tolower_non_alpha", test_tolower_non_alpha },
-		// { "ft_tolower_special_char", test_tolower_special_char },
-		// { "ft_tolower_boundary", test_tolower_boundary },
+		{ "ft_toupper_lowercase", test_toupper_lowercase },
+		{ "ft_toupper_uppercase", test_toupper_uppercase },
+		{ "ft_toupper_non_alpha", test_toupper_non_alpha },
+		{ "ft_toupper_special_char", test_toupper_special_char },
+		{ "ft_toupper_boundary", test_toupper_boundary },
+		{ "ft_tolower_lowercase", test_tolower_lowercase },
+		{ "ft_tolower_uppercase", test_tolower_uppercase },
+		{ "ft_tolower_non_alpha", test_tolower_non_alpha },
+		{ "ft_tolower_special_char", test_tolower_special_char },
+		{ "ft_tolower_boundary", test_tolower_boundary },
 	};
 
 	int test_count = sizeof(tests)/sizeof(t_test);
