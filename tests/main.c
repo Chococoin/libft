@@ -44,8 +44,13 @@ int test_tolower_uppercase();
 int test_tolower_non_alpha();
 int test_tolower_special_char();
 int test_tolower_boundary();
-
-
+int test_memset_zero();
+int test_memset_value();
+int test_memset_zero_bytes();
+int test_memset_partial();
+int test_memset_negative_value();
+int test_memset_large_buffer();
+int test_memset_return_value();
 
 int main()
 {
@@ -93,6 +98,13 @@ int main()
 		{ "ft_tolower_non_alpha", test_tolower_non_alpha },
 		{ "ft_tolower_special_char", test_tolower_special_char },
 		{ "ft_tolower_boundary", test_tolower_boundary },
+		{ "ft_memset to zero", test_memset_zero },
+		{ "ft_memset to value", test_memset_value },
+		{ "ft_memset zero bytes", test_memset_zero_bytes },
+		{ "ft_memset partial", test_memset_partial },
+		{ "ft_memset negative value", test_memset_negative_value },
+		{ "ft_memset large buffer", test_memset_large_buffer },
+		{ "ft_memset return", test_memset_return_value },
 	};
 
 	int test_count = sizeof(tests)/sizeof(t_test);
