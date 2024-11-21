@@ -1,63 +1,86 @@
-// test Setting all bytes to 0:
-void test_memset_zero() {
+#include "../includes/libft.h" // Include the header file where ft_memset is declared
+#include "test_runner.h"
+
+// Test setting all bytes to 0
+int test_memset_zero() {
     char buffer[10];
-    memset(buffer, 0, sizeof(buffer));
-    for (int i = 0; i < sizeof(buffer); i++) {
-        return(buffer[i] == 0);
+    ft_memset(buffer, 0, sizeof(buffer));
+    for (int i = 0; i < (int)sizeof(buffer); i++) {
+        if (buffer[i] != 0) {
+            return 0; // Test failed
+        }
     }
+    return 1; // Test passed
 }
 
-// Test Setting All Bytes to a Specific Value:
-void test_memset_value() {
+// Test setting all bytes to a specific value
+int test_memset_value() {
     char buffer[10];
-    memset(buffer, 'A', sizeof(buffer));
-    for (int i = 0; i < sizeof(buffer); i++) {
-        return(buffer[i] == 'A');
+    ft_memset(buffer, 'A', sizeof(buffer));
+    for (int i = 0; i < (int)sizeof(buffer); i++) {
+        if (buffer[i] != 'A') {
+            return 0; // Test failed
+        }
     }
+    return 1; // Test passed
 }
 
-// test setting zero bytes:
-void test_memset_zero_bytes() {
+// Test setting zero bytes
+int test_memset_zero_bytes() {
     char buffer[10] = {0};
-    memset(buffer, 'A', 0);
-    for (int i = 0; i < sizeof(buffer); i++) {
-        return(buffer[i] == 0);
+    ft_memset(buffer, 'A', 0);
+    for (int i = 0; i < (int)sizeof(buffer); i++) {
+        if (buffer[i] != 0) {
+            return 0; // Test failed
+        }
     }
+    return 1; // Test passed
 }
 
-// test setting part of the buffer:
-void test_memset_partial() {
+// Test setting part of the buffer
+int test_memset_partial() {
     char buffer[10] = {0};
-    memset(buffer, 'A', 5);
+    ft_memset(buffer, 'A', 5);
     for (int i = 0; i < 5; i++) {
-        return(buffer[i] == 'A');
+        if (buffer[i] != 'A') {
+            return 0; // Test failed
+        }
     }
-    for (int i = 5; i < sizeof(buffer); i++) {
-        return(buffer[i] == 0);
+    for (int i = 5; i < (int)sizeof(buffer); i++) {
+        if (buffer[i] != 0) {
+            return 0; // Test failed
+        }
     }
+    return 1; // Test passed
 }
 
-// test setting with negative value:
-void test_memset_negative_value() {
+// Test setting with negative value
+int test_memset_negative_value() {
     char buffer[10];
-    memset(buffer, -1, sizeof(buffer));
-    for (int i = 0; i < sizeof(buffer); i++) {
-        return((unsigned char)buffer[i] == 255);
+    ft_memset(buffer, -1, sizeof(buffer));
+    for (int i = 0; i < (int)sizeof(buffer); i++) {
+        if ((unsigned char)buffer[i] != 255) {
+            return 0; // Test failed
+        }
     }
+    return 1; // Test passed
 }
 
-// test setting large buffer:
-void test_memset_large_buffer() {
-	char buffer[1000];
-	memset(buffer, 'A', sizeof(buffer));
-	for (int i = 0; i < sizeof(buffer); i++) {
-		return(buffer[i] == 'A');
-	}
+// Test setting large buffer
+int test_memset_large_buffer() {
+    char buffer[1000];
+    ft_memset(buffer, 'B', sizeof(buffer));
+    for (int i = 0; i < (int)sizeof(buffer); i++) {
+        if (buffer[i] != 'B') {
+            return 0; // Test failed
+        }
+    }
+    return 1; // Test passed
 }
 
-// test return value:
-void test_memset_return() {
-	char buffer[10];
-	void *result = memset(buffer, 'A', sizeof(buffer));
-	return(result == buffer);
+// Test return value
+int test_memset_return_value() {
+    char buffer[10];
+    void *result = ft_memset(buffer, 'C', sizeof(buffer));
+    return (result == buffer); // Test passed if result matches buffer
 }
