@@ -6,11 +6,11 @@
 /*   By: glugo-mu <glugo-mu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:21:20 by glugo-mu          #+#    #+#             */
-/*   Updated: 2024/11/21 18:38:49 by glugo-mu         ###   ########.fr       */
+/*   Updated: 2024/11/21 23:45:13 by glugo-mu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(const char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
