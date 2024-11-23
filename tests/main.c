@@ -65,6 +65,13 @@ int test_strlcpy_zero_size();
 int test_strlcpy_size_less_than_src();
 int test_strlcpy_large_buffer();
 int test_strlcpy_return_value();
+int test_atoi_simple_number();
+int test_atoi_negative_number();
+int test_atoi_leading_spaces();
+int test_atoi_leading_plus();
+int test_atoi_leading_trailing_spaces();
+int test_atoi_zero();
+int test_atoi_non_numeric_end();
 
 
 int main()
@@ -134,7 +141,13 @@ int main()
 		{ "ft_strlcpy size less than src", test_strlcpy_size_less_than_src },
 		{ "ft_strlcpy large buffer", test_strlcpy_large_buffer },
 		{ "ft_strlcpy return value", test_strlcpy_return_value },
-		
+		{ "ft_atoi simple number", test_atoi_simple_number },
+		{ "ft_atoi negative number", test_atoi_negative_number },
+		{ "ft_atoi leading spaces", test_atoi_leading_spaces },
+		{ "ft_atoi leading plus", test_atoi_leading_plus },
+		{ "ft_atoi leading trailing spaces", test_atoi_leading_trailing_spaces },
+		{ "ft_atoi zero", test_atoi_zero },
+		{ "ft_atoi non numeric end", test_atoi_non_numeric_end },
 	};
 
 	int test_count = sizeof(tests)/sizeof(t_test);
