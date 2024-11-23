@@ -58,6 +58,14 @@ int test_strlcat_zero_size();
 int test_strlcat_size_less_than_dest();
 int test_strlcat_large_buffer();
 int test_strlcat_return_value();
+int test_strlcpy_empty_dest();
+int test_strlcpy_enough_space();
+int test_strlcpy_not_enough_space();
+int test_strlcpy_zero_size();
+int test_strlcpy_size_less_than_src();
+int test_strlcpy_large_buffer();
+int test_strlcpy_return_value();
+
 
 int main()
 {
@@ -119,6 +127,14 @@ int main()
 		{ "ft_strlcat size less than dest", test_strlcat_size_less_than_dest },
 		{ "ft_strlcat large buffer", test_strlcat_large_buffer },
 		{ "ft_strlcat return value", test_strlcat_return_value },
+		{ "ft_strlcpy empty dest", test_strlcpy_empty_dest },
+		{ "ft_strlcpy enough space", test_strlcpy_enough_space },
+		{ "ft_strlcpy not enough space", test_strlcpy_not_enough_space },
+		{ "ft_strlcpy zero size", test_strlcpy_zero_size },
+		{ "ft_strlcpy size less than src", test_strlcpy_size_less_than_src },
+		{ "ft_strlcpy large buffer", test_strlcpy_large_buffer },
+		{ "ft_strlcpy return value", test_strlcpy_return_value },
+		
 	};
 
 	int test_count = sizeof(tests)/sizeof(t_test);
