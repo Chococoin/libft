@@ -51,6 +51,13 @@ int test_memset_partial();
 int test_memset_negative_value();
 int test_memset_large_buffer();
 int test_memset_return_value();
+int test_strlcat_empty_dest();
+int test_strlcat_enough_space();
+int test_strlcat_not_enough_space();
+int test_strlcat_zero_size();
+int test_strlcat_size_less_than_dest();
+int test_strlcat_large_buffer();
+int test_strlcat_return_value();
 
 int main()
 {
@@ -105,6 +112,13 @@ int main()
 		{ "ft_memset negative value", test_memset_negative_value },
 		{ "ft_memset large buffer", test_memset_large_buffer },
 		{ "ft_memset return", test_memset_return_value },
+		{ "ft_strlcat empty dest", test_strlcat_empty_dest },
+		{ "ft_strlcat enough space", test_strlcat_enough_space },
+		{ "ft_strlcat not enough space", test_strlcat_not_enough_space },
+		{ "ft_strlcat zero size", test_strlcat_zero_size },
+		{ "ft_strlcat size less than dest", test_strlcat_size_less_than_dest },
+		{ "ft_strlcat large buffer", test_strlcat_large_buffer },
+		{ "ft_strlcat return value", test_strlcat_return_value },
 	};
 
 	int test_count = sizeof(tests)/sizeof(t_test);
