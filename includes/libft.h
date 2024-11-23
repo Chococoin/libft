@@ -11,5 +11,6 @@ int ft_toupper(int c);
 int ft_tolower(int c);
 void *ft_memset(void *s, int c, int n);
 int ft_strlcat(char *dest, const char *src, int size);
+int ft_strlcpy(char *dest, const char *src, int size);
 
 #endif
