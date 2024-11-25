@@ -97,14 +97,20 @@
 // int test_strtrim_empty_string();
 // int test_strtrim_empty_set();
 // int test_strtrim_set_with_spaces();
-int test_substr_simple();
-int test_substr_from_beginning();
-int test_substr_length_greater_than_string();
-int test_substr_start_greater_than_string();
-int test_substr_start_in_middle();
-int test_substr_length_zero();
-int test_substr_empty_string();
-int test_substr_start_at_end();
+// int test_substr_simple();
+// int test_substr_from_beginning();
+// int test_substr_length_greater_than_string();
+// int test_substr_start_greater_than_string();
+// int test_substr_start_in_middle();
+// int test_substr_length_zero();
+// int test_substr_empty_string();
+// int test_substr_start_at_end();
+int test_bzero_zero_length();
+int test_bzero_full_length();
+int test_bzero_empty_string();
+int test_bzero_single_char();
+int test_bzero_large_buffer();
+int test_bzero_no_effect();
 
 
 
@@ -206,14 +212,24 @@ int main()
 		// { "strtrim empty string", test_strtrim_empty_string },
 		// { "strtrim empty set", test_strtrim_empty_set },
 		// { "strtrim set with spaces", test_strtrim_set_with_spaces },
-		{ "substr simple", test_substr_simple },
-		{ "substr from beginning", test_substr_from_beginning },
-		{ "substr length greater than string", test_substr_length_greater_than_string },
-		{ "substr start greater than string", test_substr_start_greater_than_string },
-		{ "substr start in middle", test_substr_start_in_middle },
-		{ "substr length zero", test_substr_length_zero },
-		{ "substr empty string", test_substr_empty_string },
-		{ "substr start at end", test_substr_start_at_end },
+		// { "substr simple", test_substr_simple },
+		// { "substr from beginning", test_substr_from_beginning },
+		// { "substr length greater than string", test_substr_length_greater_than_string },
+		// { "substr start greater than string", test_substr_start_greater_than_string },
+		// { "substr start in middle", test_substr_start_in_middle },
+		// { "substr length zero", test_substr_length_zero },
+		// { "substr empty string", test_substr_empty_string },
+		// { "substr start at end", test_substr_start_at_end },
+		{	"bzero zero length", test_bzero_zero_length },
+		{	"bzero full length", test_bzero_full_length },
+		// {	"bzero partial length", test_bzero_partial_length },
+		{	"bzero empty string", test_bzero_empty_string },
+		{	"bzero single char", test_bzero_single_char },
+		// {	"bzero middle of string", test_bzero_middle_of_string },
+		{	"bzero large buffer", test_bzero_large_buffer },
+		// {	"bzero large length", test_bzero_large_length },
+		{	"bzero no effect", test_bzero_no_effect },
+		// {	"bzero null pointer", test_bzero_null_pointer },
 	};
 
 	int test_count = sizeof(tests)/sizeof(t_test);
