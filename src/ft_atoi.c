@@ -10,46 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-int ft_atoi(const char *nptr)
+static int	isspace(int c)
+{
+	return (c == ' ' || c == '\f' || c == '\n'
+		|| c == '\r' || c == '\t' || c == '\v');
+}
+
+int	ft_atoi(const char *nptr)
 {
 	int	i;
-	int sign;
-	int buffer;
-	int number_seen;
-	int not_double_sign;
+	int	sign;
+	int	result;
 
-	sign = 1;
-	buffer = 0;
 	i = 0;
-	number_seen = 0;
-	not_double_sign = 0;
-
-	while (nptr[i] != '\0')
+	sign = 1;
+	result = 0;
+	while (isspace(nptr[i]))
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
 		if (nptr[i] == '-')
-		{
 			sign = -1;
-			not_double_sign++;
-			if (not_double_sign > 1) return (0);
-		}
-		if (nptr[i] == '+')
-		{
-			sign = 1;
-			not_double_sign++;
-			if (not_double_sign > 1) return (0);
-		}
-		if (nptr[i] >= 33 && nptr[i] <= 42 || nptr[i] == 44 || nptr[i] == 46 || nptr[i] == 47 || nptr[i] >= 58 && nptr[i] <= 126)
-		{
-			if (!number_seen)
-				return (0);
-		}
-		if (nptr[i] >= '0' && nptr[i] <= '9')	
-			buffer = buffer * 10 + (nptr[i] - '0');
-			number_seen++;
-			if (number_seen > 1) return (0);
 		i++;
 	}
-	
-	return (buffer * sign);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
