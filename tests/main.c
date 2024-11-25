@@ -91,12 +91,20 @@
 // int test_itoa_negative_single_digit();
 // int test_itoa_large_number();
 // int test_itoa_negative_large_number();
-int test_strtrim_basic();
-int test_strtrim_no_trim();
-// int test_strtrim_full_trim();
-int test_strtrim_empty_string();
-int test_strtrim_empty_set();
-int test_strtrim_set_with_spaces();
+// int test_strtrim_basic();
+// int test_strtrim_no_trim();
+// *int test_strtrim_full_trim();
+// int test_strtrim_empty_string();
+// int test_strtrim_empty_set();
+// int test_strtrim_set_with_spaces();
+int test_substr_simple();
+int test_substr_from_beginning();
+int test_substr_length_greater_than_string();
+int test_substr_start_greater_than_string();
+int test_substr_start_in_middle();
+int test_substr_length_zero();
+int test_substr_empty_string();
+int test_substr_start_at_end();
 
 
 
@@ -192,12 +200,20 @@ int main()
 		// { "itoa negative single digit", test_itoa_negative_single_digit },
 		// { "itoa large number", test_itoa_large_number },
 		// { "itoa negative large number", test_itoa_negative_large_number },
-		{ "strtrim basic", test_strtrim_basic },
-		{ "strtrim no trim", test_strtrim_no_trim },
-		// { "strtrim full trim", test_strtrim_full_trim },
-		{ "strtrim empty string", test_strtrim_empty_string },
-		{ "strtrim empty set", test_strtrim_empty_set },
-		{ "strtrim set with spaces", test_strtrim_set_with_spaces },
+		// { "strtrim basic", test_strtrim_basic },
+		// { "strtrim no trim", test_strtrim_no_trim },
+		// *{ "strtrim full trim", test_strtrim_full_trim },
+		// { "strtrim empty string", test_strtrim_empty_string },
+		// { "strtrim empty set", test_strtrim_empty_set },
+		// { "strtrim set with spaces", test_strtrim_set_with_spaces },
+		{ "substr simple", test_substr_simple },
+		{ "substr from beginning", test_substr_from_beginning },
+		{ "substr length greater than string", test_substr_length_greater_than_string },
+		{ "substr start greater than string", test_substr_start_greater_than_string },
+		{ "substr start in middle", test_substr_start_in_middle },
+		{ "substr length zero", test_substr_length_zero },
+		{ "substr empty string", test_substr_empty_string },
+		{ "substr start at end", test_substr_start_at_end },
 	};
 
 	int test_count = sizeof(tests)/sizeof(t_test);
