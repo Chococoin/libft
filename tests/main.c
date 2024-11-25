@@ -65,23 +65,33 @@
 // int test_strlcpy_size_less_than_src();
 // int test_strlcpy_large_buffer();
 // int test_strlcpy_return_value();
-int test_atoi_simple_number();
-int test_atoi_negative_number();
-int test_atoi_leading_spaces();
-int test_atoi_leading_plus();
-int test_atoi_leading_trailing_spaces();
-int test_atoi_zero();
-int test_atoi_non_numeric_end();
-int test_atoi_non_numeric_beginning();
-int test_atoi_int_max();
-int test_atoi_int_min();
-int test_atoi_sign_after_number();
-int test_atoi_sign_after_number();
-int test_atoi_multiple_signs();
-int test_atoi_sign_in_middle();
-int test_atoi_sign_and_non_numeric();
-int test_atoi_spaces_and_signs();
-int test_atoi_multiple_signs_and_spaces();
+// int test_atoi_simple_number();
+// int test_atoi_negative_number();
+// int test_atoi_leading_spaces();
+// int test_atoi_leading_plus();
+// int test_atoi_leading_trailing_spaces();
+// int test_atoi_zero();
+// int test_atoi_non_numeric_end();
+// int test_atoi_non_numeric_beginning();
+// int test_atoi_int_max();
+// int test_atoi_int_min();
+// int test_atoi_sign_after_number();
+// int test_atoi_sign_after_number();
+// int test_atoi_multiple_signs();
+// int test_atoi_sign_in_middle();
+// int test_atoi_sign_and_non_numeric();
+// int test_atoi_spaces_and_signs();
+// int test_atoi_multiple_signs_and_spaces();
+int test_itoa_zero();
+int test_itoa_positive();
+int test_itoa_negative();
+int test_itoa_int_max();
+int test_itoa_int_min();
+int test_itoa_single_digit();
+int test_itoa_negative_single_digit();
+int test_itoa_large_number();
+int test_itoa_negative_large_number();
+
 
 
 int main()
@@ -151,22 +161,31 @@ int main()
 		// { "ft_strlcpy size less than src", test_strlcpy_size_less_than_src },
 		// { "ft_strlcpy large buffer", test_strlcpy_large_buffer },
 		// { "ft_strlcpy return value", test_strlcpy_return_value },
-		{ "atoi simple number", test_atoi_simple_number },
-		{ "atoi negative number", test_atoi_negative_number },
-		{ "atoi leading spaces", test_atoi_leading_spaces },
-		{ "atoi leading plus", test_atoi_leading_plus },
-		{ "atoi leading trailing spaces", test_atoi_leading_trailing_spaces },
-		{ "atoi zero", test_atoi_zero },
-		{ "atoi non numeric end", test_atoi_non_numeric_end },
-		{ "atoi non numeric beginning", test_atoi_non_numeric_beginning },
-		{ "atoi int max", test_atoi_int_max },
-		{ "atoi int min", test_atoi_int_min },
-		{ "atoi sign after number", test_atoi_sign_after_number },
-		{ "atoi multiple signs", test_atoi_multiple_signs },
-		{ "atoi sign in middle", test_atoi_sign_in_middle },
-		{ "atoi sign and non numeric", test_atoi_sign_and_non_numeric },
-		{ "atoi spaces and signs", test_atoi_spaces_and_signs },
-		{ "atoi multiple signs and spaces", test_atoi_multiple_signs_and_spaces },
+		// { "atoi simple number", test_atoi_simple_number },
+		// { "atoi negative number", test_atoi_negative_number },
+		// { "atoi leading spaces", test_atoi_leading_spaces },
+		// { "atoi leading plus", test_atoi_leading_plus },
+		// { "atoi leading trailing spaces", test_atoi_leading_trailing_spaces },
+		// { "atoi zero", test_atoi_zero },
+		// { "atoi non numeric end", test_atoi_non_numeric_end },
+		// { "atoi non numeric beginning", test_atoi_non_numeric_beginning },
+		// { "atoi int max", test_atoi_int_max },
+		// { "atoi int min", test_atoi_int_min },
+		// { "atoi sign after number", test_atoi_sign_after_number },
+		// { "atoi multiple signs", test_atoi_multiple_signs },
+		// { "atoi sign in middle", test_atoi_sign_in_middle },
+		// { "atoi sign and non numeric", test_atoi_sign_and_non_numeric },
+		// { "atoi spaces and signs", test_atoi_spaces_and_signs },
+		// { "atoi multiple signs and spaces", test_atoi_multiple_signs_and_spaces },
+		{ "itoa zero", test_itoa_zero },
+		{ "itoa positive", test_itoa_positive },
+		{ "itoa negative", test_itoa_negative },
+		{ "itoa int max", test_itoa_int_max },
+		{ "itoa int min", test_itoa_int_min },
+		{ "itoa single digit", test_itoa_single_digit },
+		{ "itoa negative single digit", test_itoa_negative_single_digit },
+		{ "itoa large number", test_itoa_large_number },
+		{ "itoa negative large number", test_itoa_negative_large_number },
 	};
 
 	int test_count = sizeof(tests)/sizeof(t_test);
