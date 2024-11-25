@@ -6,14 +6,14 @@
 /*   By: glugo-mu <glugo-mu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:17:00 by glugo-mu          #+#    #+#             */
-/*   Updated: 2024/11/25 12:48:01 by glugo-mu         ###   ########.fr       */
+/*   Updated: 2024/11/25 17:21:57 by glugo-mu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-static int	get_num_length(int n)
+static int	ft_get_num_length(int n)
 {
 	int	length;
 
@@ -28,7 +28,7 @@ static int	get_num_length(int n)
 	return (length);
 }
 
-static void	fill_chars(char *character, int n, int length)
+static void	ft_fill_chars(char *character, int n, int length)
 {
 	character[length] = '\0';
 	while (length > 0)
@@ -38,7 +38,7 @@ static void	fill_chars(char *character, int n, int length)
 	}
 }
 
-static int	get_digit(int number, int position)
+static int	ft_get_digit(int number, int position)
 {
 	int	divisor;
 	int	i;
@@ -57,7 +57,6 @@ char	*ft_itoa(int n)
 {
 	int		length;
 	char	*character;
-	int		i;
 	int		sign;
 
 	if (n == -2147483648)
@@ -67,7 +66,7 @@ char	*ft_itoa(int n)
 	else
 		sign = 1;
 	n *= sign;
-	length = get_num_length(n);
+	length = ft_get_num_length(n);
 	if (sign == -1)
 		length++;
 	character = (char *)malloc(sizeof(char) * (length + 1));
@@ -76,6 +75,6 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (sign == -1)
 		character[0] = '-';
-	fill_chars(character + (sign == -1), n, length - (sign == -1));
+	ft_fill_chars(character + (sign == -1), n, length - (sign == -1));
 	return (character);
 }
