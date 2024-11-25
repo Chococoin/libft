@@ -15,5 +15,6 @@ int ft_strlcat(char *dest, const char *src, int size);
 int ft_strlcpy(char *dest, const char *src, int size);
 int ft_atoi(const char *nptr);
 char *ft_itoa(int n);
+int *ft_strtrim(const char *s1, const char *set);
 
 #endif
