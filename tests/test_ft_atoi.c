@@ -76,8 +76,65 @@ int test_atoi_int_max() {
 
 // Test converting the smallest int value
 int test_atoi_int_min() {
-    const char *str = "-2147483648";
-    int result = ft_atoi(str);
+	const char *str = "-2147483648";
+	int result = ft_atoi(str);
 	printf("\nresult: %d\nString: %s\n", result, str);
-    return (result == -2147483648);
+	return (result == -2147483648);
+}
+
+// Test converting the smallest int value
+// Test converting a number with a sign after the number
+int test_atoi_sign_after_number() {
+	const char *str = "42-";
+	int result = ft_atoi(str);
+	printf("\nresult: %d\nString: %s\n", result, str);
+	return (result == 42);
+}
+
+// Test converting a number that causes integer underflow
+int test_atoi_int_underflow() {
+	const char *str = "-2147483649";
+	int result = ft_atoi(str);
+	printf("\nresult: %d\nString: %s\n", result, str);
+	return (result == -2147483648); // Assuming ft_atoi handles underflow by clamping to INT_MIN
+}
+
+// Test converting a number with multiple signs
+int test_atoi_multiple_signs() {
+	const char *str = "++42";
+	int result = ft_atoi(str);
+	printf("\nresult: %d\nString: %s\n", result, str);
+	return (result == 0);
+}
+
+// Test converting a number with a sign in the middle
+int test_atoi_sign_in_middle() {
+	const char *str = "4-2";
+	int result = ft_atoi(str);
+	printf("\nresult: %d\nString: %s\n", result, str);
+	return (result == 4);
+}
+
+// Test converting a number with a sign and non-numeric characters
+int test_atoi_sign_and_non_numeric() {
+	const char *str = "42+abc";
+	int result = ft_atoi(str);
+	printf("\nresult: %d\nString: %s\n", result, str);
+	return (result == 42);
+}
+
+// Test converting a number with spaces and signs
+int test_atoi_spaces_and_signs() {
+	const char *str = "   -42   +";
+	int result = ft_atoi(str);
+	printf("\nresult: %d\nString: %s\n", result, str);
+	return (result == -42);
+}
+
+// Test converting a number with multiple signs and spaces
+int test_atoi_multiple_signs_and_spaces() {
+	const char *str = "   ++42   ";
+	int result = ft_atoi(str);
+	printf("\nresult: %d\nString: %s\n", result, str);
+	return (result == 0);
 }
