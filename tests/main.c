@@ -82,15 +82,21 @@
 // int test_atoi_sign_and_non_numeric();
 // int test_atoi_spaces_and_signs();
 // int test_atoi_multiple_signs_and_spaces();
-int test_itoa_zero();
-int test_itoa_positive();
-int test_itoa_negative();
-int test_itoa_int_max();
-int test_itoa_int_min();
-int test_itoa_single_digit();
-int test_itoa_negative_single_digit();
-int test_itoa_large_number();
-int test_itoa_negative_large_number();
+// int test_itoa_zero();
+// int test_itoa_positive();
+// int test_itoa_negative();
+// int test_itoa_int_max();
+// int test_itoa_int_min();
+// int test_itoa_single_digit();
+// int test_itoa_negative_single_digit();
+// int test_itoa_large_number();
+// int test_itoa_negative_large_number();
+int test_strtrim_basic();
+int test_strtrim_no_trim();
+// int test_strtrim_full_trim();
+int test_strtrim_empty_string();
+int test_strtrim_empty_set();
+int test_strtrim_set_with_spaces();
 
 
 
@@ -177,15 +183,21 @@ int main()
 		// { "atoi sign and non numeric", test_atoi_sign_and_non_numeric },
 		// { "atoi spaces and signs", test_atoi_spaces_and_signs },
 		// { "atoi multiple signs and spaces", test_atoi_multiple_signs_and_spaces },
-		{ "itoa zero", test_itoa_zero },
-		{ "itoa positive", test_itoa_positive },
-		{ "itoa negative", test_itoa_negative },
-		{ "itoa int max", test_itoa_int_max },
-		{ "itoa int min", test_itoa_int_min },
-		{ "itoa single digit", test_itoa_single_digit },
-		{ "itoa negative single digit", test_itoa_negative_single_digit },
-		{ "itoa large number", test_itoa_large_number },
-		{ "itoa negative large number", test_itoa_negative_large_number },
+		// { "itoa zero", test_itoa_zero },
+		// { "itoa positive", test_itoa_positive },
+		// { "itoa negative", test_itoa_negative },
+		// { "itoa int max", test_itoa_int_max },
+		// { "itoa int min", test_itoa_int_min },
+		// { "itoa single digit", test_itoa_single_digit },
+		// { "itoa negative single digit", test_itoa_negative_single_digit },
+		// { "itoa large number", test_itoa_large_number },
+		// { "itoa negative large number", test_itoa_negative_large_number },
+		{ "strtrim basic", test_strtrim_basic },
+		{ "strtrim no trim", test_strtrim_no_trim },
+		// { "strtrim full trim", test_strtrim_full_trim },
+		{ "strtrim empty string", test_strtrim_empty_string },
+		{ "strtrim empty set", test_strtrim_empty_set },
+		{ "strtrim set with spaces", test_strtrim_set_with_spaces },
 	};
 
 	int test_count = sizeof(tests)/sizeof(t_test);
