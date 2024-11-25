@@ -6,7 +6,7 @@
 /*   By: glugo-mu <glugo-mu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:17:00 by glugo-mu          #+#    #+#             */
-/*   Updated: 2024/11/25 12:25:21 by glugo-mu         ###   ########.fr       */
+/*   Updated: 2024/11/25 12:48:01 by glugo-mu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ static int	get_num_length(int n)
 {
 	int	length;
 
-	if (n < 0)
-		n *= -1;
 	length = 0;
 	if (n <= 0)
 		length = 1;
@@ -28,6 +26,16 @@ static int	get_num_length(int n)
 		length++;
 	}
 	return (length);
+}
+
+static void	fill_chars(char *character, int n, int length)
+{
+	character[length] = '\0';
+	while (length > 0)
+	{
+		character[--length] = (n % 10) + '0';
+		n /= 10;
+	}
 }
 
 static int	get_digit(int number, int position)
@@ -64,19 +72,10 @@ char	*ft_itoa(int n)
 		length++;
 	character = (char *)malloc(sizeof(char) * (length + 1));
 	character[length] = '\0';
-	length--;
+	if (!character)
+		return (NULL);
 	if (sign == -1)
 		character[0] = '-';
-	i = 0;
-	if (sign == -1)
-		i = -1;
-	else
-		i = 0;
-	while (length >= 0)
-	{
-		character[i] = get_digit(n, length) + '0';
-		length--;
-		i++;
-	}
+	fill_chars(character + (sign == -1), n, length - (sign == -1));
 	return (character);
 }

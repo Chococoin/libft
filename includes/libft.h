@@ -14,5 +14,6 @@ int ft_strlcpy(char *dst, const char *src, int dstsize);
 int ft_strlcat(char *dest, const char *src, int size);
 int ft_strlcpy(char *dest, const char *src, int size);
 int ft_atoi(const char *nptr);
+char *ft_itoa(int n);
 
 #endif
