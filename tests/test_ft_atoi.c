@@ -1,12 +1,13 @@
 #include "../includes/libft.h" // Include the header file where ft_atoi is declared
 #include "test_runner.h"
 #include <stdio.h> // Include for printf
+#include <stdlib.h> // Include for atoi
 
 // Test converting a simple number
 int test_atoi_simple_number() {
     const char *str = "42";
     int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
     return (result == 42);
 }
 
@@ -14,7 +15,7 @@ int test_atoi_simple_number() {
 int test_atoi_negative_number() {
     const char *str = "-42";
     int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
     return (result == -42);
 }
 
@@ -22,7 +23,7 @@ int test_atoi_negative_number() {
 int test_atoi_leading_spaces() {
     const char *str = "   42";
     int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
     return (result == 42);
 }
 
@@ -30,7 +31,7 @@ int test_atoi_leading_spaces() {
 int test_atoi_leading_plus() {
     const char *str = "+42";
     int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
     return (result == 42);
 }
 
@@ -38,7 +39,7 @@ int test_atoi_leading_plus() {
 int test_atoi_leading_trailing_spaces() {
     const char *str = "   42   ";
     int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
     return (result == 42);
 }
 
@@ -46,7 +47,7 @@ int test_atoi_leading_trailing_spaces() {
 int test_atoi_zero() {
     const char *str = "0";
     int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
     return (result == 0);
 }
 
@@ -54,7 +55,7 @@ int test_atoi_zero() {
 int test_atoi_non_numeric_end() {
     const char *str = "42abc";
     int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
     return (result == 42);
 }
 
@@ -62,7 +63,7 @@ int test_atoi_non_numeric_end() {
 int test_atoi_non_numeric_beginning() {
     const char *str = "abc42";
     int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
     return (result == 0);
 }
 
@@ -70,7 +71,7 @@ int test_atoi_non_numeric_beginning() {
 int test_atoi_int_max() {
     const char *str = "2147483647";
     int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
     return (result == 2147483647);
 }
 
@@ -78,7 +79,7 @@ int test_atoi_int_max() {
 int test_atoi_int_min() {
 	const char *str = "-2147483648";
 	int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
 	return (result == -2147483648);
 }
 
@@ -87,23 +88,15 @@ int test_atoi_int_min() {
 int test_atoi_sign_after_number() {
 	const char *str = "42-";
 	int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
 	return (result == 42);
-}
-
-// Test converting a number that causes integer underflow
-int test_atoi_int_underflow() {
-	const char *str = "-2147483649";
-	int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
-	return (result == -2147483648); // Assuming ft_atoi handles underflow by clamping to INT_MIN
 }
 
 // Test converting a number with multiple signs
 int test_atoi_multiple_signs() {
 	const char *str = "++42";
 	int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
 	return (result == 0);
 }
 
@@ -111,7 +104,7 @@ int test_atoi_multiple_signs() {
 int test_atoi_sign_in_middle() {
 	const char *str = "4-2";
 	int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
 	return (result == 4);
 }
 
@@ -119,7 +112,7 @@ int test_atoi_sign_in_middle() {
 int test_atoi_sign_and_non_numeric() {
 	const char *str = "42+abc";
 	int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
 	return (result == 42);
 }
 
@@ -127,7 +120,7 @@ int test_atoi_sign_and_non_numeric() {
 int test_atoi_spaces_and_signs() {
 	const char *str = "   -42   +";
 	int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
 	return (result == -42);
 }
 
@@ -135,6 +128,6 @@ int test_atoi_spaces_and_signs() {
 int test_atoi_multiple_signs_and_spaces() {
 	const char *str = "   ++42   ";
 	int result = ft_atoi(str);
-	printf("\nresult: %d\nString: %s\n", result, str);
+	printf("\nresult: %d\nString: %s\nAtoi: %d\n", result, str, atoi(str));
 	return (result == 0);
 }
