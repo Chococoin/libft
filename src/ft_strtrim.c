@@ -6,9 +6,11 @@
 /*   By: glugo-mu <glugo-mu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 13:50:07 by glugo-mu          #+#    #+#             */
-/*   Updated: 2024/11/25 17:38:15 by glugo-mu         ###   ########.fr       */
+/*   Updated: 2024/11/25 20:20:50 by glugo-mu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 static int	ft_is_in_set(char c, char const *set)
 {
